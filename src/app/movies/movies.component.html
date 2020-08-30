@@ -1,3 +1,10 @@
-{{movie}}
+<h2>Movies list</h2>
 
-<h1>Hi</h1>
+<ul class="movies">
+    <li *ngFor="let movie of movies"
+     [class.selected]="movie === selectedMovie"
+    (click)="onSelect(movie)">
+    <span class="badge">{{movie.id}}</span>
+    {{movie.name}}
+</li>
+</ul>

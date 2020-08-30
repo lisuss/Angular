@@ -1,4 +1,6 @@
+import { Movie } from './../movie';
 import { Component, OnInit } from '@angular/core';
+import {MOVIES} from './../mock-movies';
 
 @Component({
   selector: 'app-movies',
@@ -7,11 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesComponent implements OnInit {
 
-  movie = "Scary Movie";
+  movies = MOVIES;
+  selectedMovie: Movie;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  
+  onSelect(movie: Movie): void {
+    this.selectedMovie = movie;
+  }
 }
