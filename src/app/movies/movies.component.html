@@ -1,12 +1,27 @@
 <h2>Movies list</h2>
-
+<ul>
+    <li class="list-unstyled">
+<div class="text-center">
+<input placeholder="Start typing movie name" type="text"[(ngModel)]="movieName" class="text-center"(input)="onSearch()">
+</div>
+</li>
+</ul>
 <ul class="movies">
+
+    <div class="text-center list-unstyled">
     <li *ngFor="let movie of movies"
      [class.selected]="movie === selectedMovie"
     (click)="onSelect(movie)">
-    <span class="badge">{{movie.id}}</span>
+    <img src='{{movie.img}}' alt="..." class="img-thumbnail hoover" style="width:200px; height: 200px">
+    <br> 
+    
+    
     {{movie.name}}
+    {{movie.releaseDate}}
+    
 </li>
+</div>
+
 </ul>
 <app-movie-detail [movie]="selectedMovie"></app-movie-detail>
 

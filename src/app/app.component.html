@@ -1,15 +1,17 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-toggleable-md">
 <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Movies List</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a routerLink="/dashboard">Dashboard</a></li>
-      <li><a href="/movies">Movies</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="/home">Home</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="/dashboard">Dashboard</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="/movies">Movies</a></li>
     </ul>
   </div>
 </nav>
+
+
 
 <router-outlet></router-outlet>
 

@@ -7,7 +7,10 @@ import { MoviesComponent } from './movies/movies.component';
 import {FormsModule} from '@angular/forms';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component'
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
+
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     MoviesComponent,
     MovieDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent,
+
   ],
   imports: [
     BrowserModule,

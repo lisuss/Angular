@@ -1,11 +1,10 @@
-<div *ngIf="movie">
-    <h2>{{movie.name | uppercase}} Details</h2>
-    <div><span>ID: </span>
-        {{movie.id}}
+<div *ngIf="movie card" class="text-center">
+    <div class="card-body">
+    <h2 >{{movie.name | uppercase}} Details</h2>
+        
+
+        <h2>Release Date: {{movie.releaseDate}}</h2>
+
+        <img class="card-img-bottom" src="{{movie.imgDetails}}" alt="Card image cap">
     </div>
-        <label>
-            Name:
-            <input [(ngModel)]="movie.name"
-            placeholder="name">
-        </label>
 </div>

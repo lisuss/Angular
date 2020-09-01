@@ -13,6 +13,7 @@ import {MOVIES} from './../mock-movies';
 export class MoviesComponent implements OnInit {
   selectedMovie: Movie;
   movies: Movie[];
+  movieName: string;
   
 
   constructor(private MovieService: MovieService) { }
@@ -28,5 +29,16 @@ export class MoviesComponent implements OnInit {
   getMovies(): void {
     this.MovieService.getMovies().
     subscribe(movies => this.movies=movies);
+  }
+
+  onSearch(){
+    if(this.movieName != "") {
+
+    } else if (this.movieName == "") {
+      this.ngOnInit();
+    }
+    this.movies  = this.movies.filter(res=> {
+      return res.name.toLocaleLowerCase().match(this.movieName.toLocaleLowerCase());
+    });
   }
 }
